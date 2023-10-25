@@ -1,4 +1,4 @@
-package InfoInput;
+package Controller.InfoInput;
 
 import java.util.Arrays;
 import java.util.HashSet;
