@@ -7,11 +7,17 @@ import java.util.Objects;
  */
 public class Rating {
 
+    /** How well a player shoots from outside (0-100) */
     private int outsideShotRating;
+    /** How well a player shoots from inside (0-100) */
     private int insideShotRating;
+    /** How well a player rebounds (0-100) */
     private int reboundRating;
+    /** How well a player defends inside (0-100) */
     private int insideDefenseRating;
+    /** How well a player defends outside (0-100) */
     private int outsideDefenseRating;
+    /** How well a player passes (0-100) */
     private int passingRating;
 
     /**
@@ -20,6 +26,9 @@ public class Rating {
      */
     public Rating(Type type){
         switch (type) {
+            case Three_and_D:
+                generateFields(4, 9, 9, 9, 5, 7);
+                break;
             case All_around:
                 generateFields(7, 6, 6, 7, 7, 6);
                 break;
@@ -32,11 +41,17 @@ public class Rating {
             case Playmaker:
                 generateFields(7, 7, 9, 9, 8, 4);
                 break;
-            case Rebounder:
+            case Energetic_rebounder:
                 generateFields(9, 5, 4, 5, 9, 9);
+                break;
+            case Three_level_scorer:
+                generateFields(5, 5, 7, 9, 9, 7);
                 break;
             case Post_player:
                 generateFields(9, 4, 5, 7, 9, 8);
+                break;
+            case In_out_defender:
+                generateFields(8, 8, 7, 4, 4, 9);
                 break;
             case Perimeter_defender:
                 generateFields(6, 9, 9, 8, 4, 8);
@@ -46,6 +61,9 @@ public class Rating {
                 break;
             case Pure_shooter:
                 generateFields(4, 7, 9, 9, 9, 8);
+                break;
+            case Stretch_big:
+                generateFields(4, 6, 6, 7, 9, 9);
                 break;
             case Paint_beast:
                 generateFields(9, 0, 0, 0, 9, 8);
@@ -61,6 +79,9 @@ public class Rating {
                 break;
             case Lockdown_defender:
                 generateFields(6, 6, 6, 0, 0, 7);
+                break;
+            case Two_way_superstar:
+                generateFields(3, 3, 6, 2, 2, 8);
                 break;
             case God:
                 generateFields(0, 0, 0, 0, 0, 0);
