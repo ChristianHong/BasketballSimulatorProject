@@ -6,6 +6,6 @@ package Model.Generator.NameOptions;
 public class TeamList {
 
     public static String [] teamNameList = {
-            "Bucks", "Warriors", "Celtics", "Nuggets"};
+            "Bucks", "Warriors", "Celtics"};
 
 }
