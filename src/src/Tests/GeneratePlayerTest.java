@@ -1,9 +1,9 @@
-package tests;
+package Tests;
 
-import model.Autogeneration.GeneratePlayer;
-import model.Player.Player;
-import model.Player.Position;
-import model.Player.Role;
+import Model.Generator.GeneratePlayer;
+import Model.Player.Player;
+import Model.Player.Position;
+import Model.Player.Role;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +20,7 @@ class GeneratePlayerTest {
 
     @Test
     void createPlayer(){
-        for(int i = 0; i<10; i++){
+        for(int i = 0; i < 10; i++){
             Player player = generator.createPlayer();
             assertAll(() -> assertNotNull(player.getName()),
                     () -> assertNotNull(player.getAge()),
