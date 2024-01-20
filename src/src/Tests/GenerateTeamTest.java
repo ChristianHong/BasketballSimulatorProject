@@ -16,8 +16,7 @@ class GenerateTeamTest {
     void setUp() {
         generator = new GenerateTeam();
     }
-
-
+    
     @Test
     void generateGodTeam(){
         Team team = generator.generateGodTeam();
