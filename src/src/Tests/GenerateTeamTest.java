@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GenerateTeamTest {
     private GenerateTeam generator;
-
     
     @BeforeEach
     void setUp() {
