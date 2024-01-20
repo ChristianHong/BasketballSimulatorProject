@@ -12,11 +12,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class GenerateTeamTest {
     private GenerateTeam generator;
 
+    
     @BeforeEach
     void setUp() {
         generator = new GenerateTeam();
     }
-    
+
     @Test
     void generateGodTeam(){
         Team team = generator.generateGodTeam();
