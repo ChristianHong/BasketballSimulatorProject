@@ -18,11 +18,12 @@ class PlayerTest {
         player = new Player("Lebron James", 35, Type.All_around,
                 Role.Starter, Position.Small_forward);
     }
-    
+
     @Test
     void getType() {
         assertEquals(Type.All_around, player.getType());
     }
+    
     @Test
     void increaseAge() {
         player.increaseAge();
