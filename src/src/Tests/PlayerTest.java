@@ -29,5 +29,4 @@ class PlayerTest {
         player.increaseAge();
         assertEquals(36, player.getAge());
     }
-
 }
