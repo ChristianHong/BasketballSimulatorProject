@@ -23,7 +23,7 @@ class PlayerTest {
     void getType() {
         assertEquals(Type.All_around, player.getType());
     }
-    
+
     @Test
     void increaseAge() {
         player.increaseAge();
