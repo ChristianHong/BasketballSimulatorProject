@@ -8,7 +8,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
+
 class PlayoffsTest {
     private Playoffs playoffs;
     private GenerateTeam generator;
@@ -22,6 +24,7 @@ class PlayoffsTest {
         }
         playoffs = new Playoffs(teamList, 2020);
     }
+
     @Test
     void simulateRound() {
         playoffs.simulate();
