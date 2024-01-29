@@ -6,15 +6,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 class RatingTest {
-
     private Rating rating;
 
     @BeforeEach
     void setUp() {
         rating = new Rating(Type.God);
     }
+
     @Test
     void generateRating(){
         assertAll(() -> assertTrue(rating.generateRating(1) >= 80 && rating.generateRating(1) <= 90),
