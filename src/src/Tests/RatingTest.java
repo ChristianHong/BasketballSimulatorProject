@@ -15,7 +15,6 @@ class RatingTest {
     void setUp() {
         rating = new Rating(Type.God);
     }
-
     @Test
     void generateRating(){
         assertAll(() -> assertTrue(rating.generateRating(1) >= 80 && rating.generateRating(1) <= 90),
@@ -25,6 +24,4 @@ class RatingTest {
                 () -> assertTrue(rating.generateRating(5) >= 40 && rating.generateRating(5) <= 50),
                 () -> assertTrue(rating.generateRating(6) >= 30 && rating.generateRating(6) <= 40));
     }
-
-
 }
