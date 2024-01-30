@@ -15,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class SeasonTest {
 
     Season season;
-
     @BeforeEach
     void setUp() {
         GenerateTeam generator = new GenerateTeam();
@@ -27,13 +26,11 @@ class SeasonTest {
         ArrayList<Team> teamList = new ArrayList<>(teams);
         season = new Season(teamList, 2020);
     }
-
     @Test
     void arrangeGames() {
         season.arrangeGames();
         assertEquals(12, season.getGameList().size());
     }
-
     @Test
     void parseGameStats(){
         season.arrangeGames();
@@ -42,7 +39,6 @@ class SeasonTest {
         int num = season.getPlayerStatsMap().size();
         assertEquals(36, num);
     }
-
     @Test
     void parseSeasonStats(){
         season.simulateSeason();
