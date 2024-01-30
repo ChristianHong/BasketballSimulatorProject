@@ -1,6 +1,6 @@
 package Tests;
 
-import Model.Autogeneration.GenerateTeam;
+import Model.Generator.GenerateTeam;
 import Model.Games.Season;
 import Model.Player.Position;
 import Model.Team.Team;
