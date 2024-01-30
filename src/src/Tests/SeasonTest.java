@@ -1,9 +1,9 @@
 package Tests;
 
-import model.Autogeneration.GenerateTeam;
-import model.Games.Season;
-import model.Player.Position;
-import model.Team.Team;
+import Model.Autogeneration.GenerateTeam;
+import Model.Games.Season;
+import Model.Player.Position;
+import Model.Team.Team;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
