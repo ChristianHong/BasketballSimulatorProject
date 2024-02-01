@@ -21,16 +21,19 @@ class TeamTest {
         coach.setTeam(team);
         team.setCoach(coach);
     }
+
     @Test
     void addWin() {
         team.addWin();
         assertEquals(1, team.getWins());
     }
+
     @Test
     void addLoss() {
         team.addLoss();
         assertEquals(1, team.getLosses());
     }
+
     @Test
     void getCoach() {
         Coach coach1 = new Coach("Phil Jackson", 65);
@@ -38,6 +41,7 @@ class TeamTest {
         assertAll(() -> assertNotEquals(coach1, team.getCoach()),
                 () -> assertEquals(coach2, team.getCoach()));
     }
+
     @Test
     void addPlayer() {
         Player player = new Player("Lebron James", 35, Type.All_around,
@@ -46,6 +50,7 @@ class TeamTest {
         assertAll(() -> assertEquals(1, team.getRoster().size()),
                 () -> assertEquals(player, team.getRoster().get(0)));
     }
+    
     @Test
     void removePlayer() {
         Player player1 = new Player("Lebron James", 35, Type.All_around,
