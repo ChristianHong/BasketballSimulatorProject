@@ -12,7 +12,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TeamTotalsTest {
-
     @Test
     void TeamStats(){
         Player curry = new Player("Curry", 31, Type.Offensive_playmaker,
@@ -29,5 +28,4 @@ class TeamTotalsTest {
         TeamTotals stats = new TeamTotals(warriors);
         assertTrue(stats.getInsideDefenseAverage() < 100);
     }
-
 }
