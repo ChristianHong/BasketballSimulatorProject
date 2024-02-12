@@ -25,7 +25,21 @@ public class GenerateCoach {
      * Generates a unique name
      * @return Name of coach
      */
-    
+    public String generateName(){
+        String name = "";
+        int listLength = 2943; //length of arrays in NameLists
+        while (name.equals("")){ //will break loop if name is not in nameSet
+            int random = new Random().nextInt(listLength);
+            String firstName = NameLists.firstNameList[random];
+            String lastName = NameLists.lastNameList[random];
+            name = firstName + " " + lastName;
+            if(nameSet.contains(name)){ //O(1) time complexity
+                name = "";
+            }
+        }
+        nameSet.add(name);
+        return name;
+    }
 
     /**
      * Generates age by random
