@@ -65,5 +65,14 @@ public class GenerateCoach {
     public Coach createCoach(String name){
         return new Coach(name, generateAge());
     }
-    
+
+    /**
+     * Creates a coach given a name and age
+     * @param name Name of coach
+     * @param age Age of coach
+     * @return Coach
+     */
+    public Coach createCoach(String name, int age){
+        return new Coach(name, age);
+    }
 }
