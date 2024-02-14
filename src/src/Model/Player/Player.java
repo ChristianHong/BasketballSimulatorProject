@@ -93,24 +93,7 @@ public class Player {
         return type;
     }
 
-    /**
-     * Equals method for player
-     * @param o Player to be compared to
-     * @return If player is the same
-     */
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Player player = (Player) o;
-        return age == player.age &&
-                Objects.equals(name, player.name) &&
-                Objects.equals(rating, player.rating) &&
-                Objects.equals(role, player.role) &&
-                Objects.equals(position, player.position) &&
-                Objects.equals(team.getName(), player.team.getName()) &&
-                type == player.type;
-    }
+    
 
     /**
      * Hash method for player
