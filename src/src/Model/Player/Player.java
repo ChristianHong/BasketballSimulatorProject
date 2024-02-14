@@ -34,7 +34,24 @@ public class Player {
         this.position = position;
     }
 
-    
+    /**
+     * Constructor for Player when team is known
+     * @param name Name of player
+     * @param age Age of player
+     * @param type Type of player
+     * @param team Team of player
+     * @param role Role of player
+     * @param position Position of player
+     */
+    public Player(String name, int age, Type type, Role role, Position position, Team team){
+        this.name = name;
+        this.age = age;
+        this.rating = new Rating(type);
+        this.type = type;
+        this.role = role;
+        this.team = team;
+        this.position = position;
+    }
 
 
     /**
