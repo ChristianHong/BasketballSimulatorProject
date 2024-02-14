@@ -121,28 +121,7 @@ public class Player {
         return Objects.hash(name, age, rating, type, role, position, team.getName());
     }
 
-    /**
-     * String method for player
-     * @return String of player
-     */
-    @Override
-    public String toString() {
-        String team;
-        if(this.team == null){
-            team = "None";
-        } else{
-            team = this.team.getName();
-        }
-        return "Player{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", rating=" + rating +
-                ", type=" + type +
-                ", role=" + role +
-                ", position=" + position +
-                ", team=" + team +
-                '}';
-    }
+    
 
     /**
      * Getter for player team
