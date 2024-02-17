@@ -42,5 +42,21 @@ public class SeasonLeader {
         return amount;
     }
 
-    
+    /**
+     * Prints this season leader
+     * @return String of season leader
+     */
+    @Override
+    public String toString() {
+        String top = "";
+        String bottom = "|\n";
+        if(this.type.equals(LeaderType.threes)){
+            top = "| Leader in threes made during season\n";
+            bottom = "";
+        } else{
+            top = String.format("| Leader in %s per game\n", this.type);
+        }
+        return  top + String.format("| %s (%s)- %s\n", this.player.getName(), player.getTeam().getName(),
+                this.amount) + bottom;
+    }
 }
