@@ -14,7 +14,17 @@ public class SeasonLeader {
     /** Type that player led in */
     private LeaderType type;
 
-    
+    /**
+     * Constructor for SeasonLeader
+     * @param player Player who led a season type
+     * @param amount Number player averaged / had
+     * @param type Type that player led in
+     */
+    public SeasonLeader(Player player, double amount, LeaderType type){
+        this.player = player;
+        this.amount = amount;
+        this.type = type;
+    }
 
     /**
      * Getter for player
