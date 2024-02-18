@@ -18,7 +18,31 @@ public class Playoffs {
     private Team nuggets;
     private Team celtics;
 
-    
+    /**
+     * Constructor for Playoffs
+     * @param teams Teams in playoffs
+     * @param year Year of playoffs
+     */
+    public Playoffs(ArrayList<Team> teams, int year){
+        this.year = year;
+        this.gameList = new ArrayList<>();
+        for(Team team : teams){
+            switch (team.getName()) {
+                case "Bucks":
+                    bucks = team;
+                    break;
+                case "Warriors":
+                    warriors = team;
+                    break;
+                case "Nuggets":
+                    nuggets = team;
+                    break;
+                default:  //must be celtics
+                    celtics = team;
+                    break;
+            }
+        }
+    }
 
     /**
      * Simulates a round with two teams
