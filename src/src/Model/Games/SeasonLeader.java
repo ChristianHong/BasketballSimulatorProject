@@ -34,7 +34,13 @@ public class SeasonLeader {
         return player;
     }
 
-    
+    /**
+     * Getter for amount
+     * @return Amount
+     */
+    public double getAmount() {
+        return amount;
+    }
 
     /**
      * Prints this season leader
