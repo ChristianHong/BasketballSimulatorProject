@@ -26,13 +26,7 @@ public class SeasonLeader {
         this.type = type;
     }
 
-    /**
-     * Getter for player
-     * @return Player
-     */
-    public Player getPlayer() {
-        return player;
-    }
+    
 
     /**
      * Getter for amount
