@@ -62,15 +62,7 @@ public class Playoffs {
             } else {
                 team2Wins += 1;
             }
-        }
-        PlayoffRound round;
-        if(team1Wins > team2Wins){ //team1 won
-            round = new PlayoffRound(team1, team1Wins, team2, team2Wins, roundType);
-        } else{ //team2 won
-            round = new PlayoffRound(team2, team2Wins, team1, team1Wins, roundType);
-        }
-        System.out.println(round);
-        return round;
+        
     }
 
     /**
