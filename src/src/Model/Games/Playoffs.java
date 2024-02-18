@@ -14,9 +14,7 @@ public class Playoffs {
     private PlayoffRound championshipRound;
     private ArrayList<Game> gameList;
     private Team bucks;
-    private Team warriors;
-    private Team nuggets;
-    private Team celtics;
+   
 
     /**
      * Constructor for Playoffs
