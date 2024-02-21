@@ -20,15 +20,7 @@ public class Game {
     private Team loser;
     private TeamStats loserBoxScore;
 
-    /**
-     * Constructor for Game
-     * @param team1 Team one
-     * @param team2 Team two
-     */
-    public Game(Team team1, Team team2){
-        this.team1 = team1;
-        this.team2 = team2;
-    }
+    
 
     /**
      * Getter for team one
