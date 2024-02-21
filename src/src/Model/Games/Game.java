@@ -86,23 +86,7 @@ public class Game {
         return winner;
     }
 
-    /**
-     * Setter for winner
-     * @param winner Winner of game
-     */
-    public void setWinner(Team winner) {
-        this.winner = winner;
-        winner.addWin();
-        if(winner.equals(team1)){ //team2 loser
-            winnerBoxScore = team1BoxScore;
-            loserBoxScore = team2BoxScore;
-            setLoser(team2);
-        } else{ //team1 loser
-            winnerBoxScore = team2BoxScore;
-            loserBoxScore = team1BoxScore;
-            setLoser(team1);
-        }
-    }
+    
 
     /**
      * Getter for loser
