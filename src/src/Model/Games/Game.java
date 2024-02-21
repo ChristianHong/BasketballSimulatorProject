@@ -121,7 +121,23 @@ public class Game {
         loser.addLoss();
     }
 
-    
+    /**
+     * Equals method for game
+     * @param o Game to be compared
+     * @return If game is the same
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Game game = (Game) o;
+        return team1BoxScore == game.team1BoxScore &&
+                team2BoxScore == game.team2BoxScore &&
+                Objects.equals(team1, game.team1) &&
+                Objects.equals(team2, game.team2) &&
+                Objects.equals(winner, game.winner) &&
+                Objects.equals(loser, game.loser);
+    }
 
     /**
      * Hash method for game
