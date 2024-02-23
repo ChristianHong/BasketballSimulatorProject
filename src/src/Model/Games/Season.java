@@ -101,22 +101,7 @@ public class Season {
         return bd.doubleValue();
     }
 
-    /**
-     * Parse through playerStatsMap to determine highest pts, rebs, and asts averages
-     */
-    public void parseSeasonStats(){
-        HashMap<Player, Integer> pointsMap = new HashMap<>();
-        HashMap<Player, Integer> reboundsMap = new HashMap<>();
-        HashMap<Player, Integer> assistsMap = new HashMap<>();
-        HashMap<Player, Integer> threeMap = new HashMap<>();
-        for(ArrayList<PlayerStats> statsList : this.playerStatsMap.values()){ //loop through all stats
-            for(PlayerStats stats : statsList){
-                pointsMap = updatePlayerStats(pointsMap, stats.getTotalPoints(), stats.getPlayer());
-                reboundsMap = updatePlayerStats(reboundsMap, stats.getRebounds(), stats.getPlayer());
-                assistsMap = updatePlayerStats(assistsMap, stats.getAssists(), stats.getPlayer());
-                threeMap = updatePlayerStats(threeMap, stats.getThreePointers(), stats.getPlayer());
-            }
-        }
+    
 
         double highest = 0;
         for(Player player : pointsMap.keySet()){
