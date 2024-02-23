@@ -25,7 +25,17 @@ public class Season {
     private Playoffs playoffs;
     private final int year;
 
-    
+    /**
+     * Constructor for Season
+     * @param teamList List of teams in this season
+     * @param year Year of this season
+     */
+    public Season(ArrayList<Team> teamList, int year){
+        this.gameList = new ArrayList<>();
+        this.teamList = teamList;
+        this.playerStatsMap = new HashMap<>();
+        this.year = year;
+    }
 
     /**
      * Line teams up against each other and add all games to gameList
