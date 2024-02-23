@@ -155,23 +155,7 @@ public class Season {
         }
     }
 
-    /**
-     * Update given map with given stats
-     * @param map Map to be updates
-     * @param statNum Number to be entered into map (value)
-     * @param player Player that statNum belongs to (key)
-     * @return Updated map
-     */
-    public HashMap<Player, Integer> updatePlayerStats(HashMap<Player, Integer> map, Integer statNum, Player player){
-        if(map.containsKey(player)){ //key in map
-            int updateName = map.get(player);
-            updateName += statNum;
-            map.put(player, updateName);
-        } else{ //key not in map
-            map.put(player, statNum);
-        }
-        return map;
-    }
+    
 
 
     /**
