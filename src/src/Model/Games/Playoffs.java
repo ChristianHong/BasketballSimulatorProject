@@ -73,7 +73,21 @@ public class Playoffs {
         return round;
     }
 
-    
+    /**
+     * Simulates the playoffs
+     */
+    public void simulate(){
+        PlayoffRound westRound = simulateRound(nuggets, warriors, RoundType.West);
+        PlayoffRound eastRound = simulateRound(bucks, celtics, RoundType.East);
+        PlayoffRound championshipRound = simulateRound(westRound.getWinner(), eastRound.getWinner(),
+                RoundType.Championship);
+        championshipRound.getWinner().addChampionship();
+        this.champion = championshipRound.getWinner();
+        this.championshipRound = championshipRound;
+        System.out.printf("| The %s have won the %s championship!%n",
+                championshipRound.getWinner().getName(), year);
+        System.out.println(championshipRound.getWinner().toString());
+    }
 
     /**
      * Getter for playoff year
