@@ -64,5 +64,15 @@ public class League {
         return gameMap;
     }
 
-    
+    /**
+     * Adds a year to this league and all the players within the teams
+     */
+    public void addYear(){
+        this.year += 1;
+        for(Team team : this.teamList){
+            for(Player player : team.getRoster()){
+                player.increaseAge();
+            }
+        }
+    }
 }
