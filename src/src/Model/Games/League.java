@@ -14,7 +14,15 @@ public class League {
     private ArrayList<Season> seasonList;
     private int year;
 
-   
+    /**
+     * Constructor for League
+     * @param teamList List of teams in this league
+     */
+    public League(ArrayList<Team> teamList){
+        this.teamList = teamList;
+        this.seasonList = new ArrayList<>();
+        this.year = Calendar.getInstance().get(Calendar.YEAR);
+    }
 
     /**
      * Simulates a new season and adds it to seasonlist
