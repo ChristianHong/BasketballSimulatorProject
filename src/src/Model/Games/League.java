@@ -24,15 +24,7 @@ public class League {
         this.year = Calendar.getInstance().get(Calendar.YEAR);
     }
 
-    /**
-     * Simulates a new season and adds it to seasonlist
-     */
-    public void simulateNewSeason(){
-        Season season = new Season(this.teamList, this.year);
-        season.simulateSeason();
-        season.simulatePlayoffs();
-        this.seasonList.add(season);
-    }
+   
 
     /**
      * Builds a map of all the games userTeam has played
