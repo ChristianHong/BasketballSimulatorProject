@@ -58,20 +58,7 @@ public class Team {
         coach.setTeam(this);
     }
 
-    /**
-     * Constructor for team when a coach has been assigned and type is known
-     * @param name Name of team
-     * @param coach Coach for team
-     */
-    public Team(String name, Coach coach, TeamType type){
-        this.name = name;
-        this.wins = 0;
-        this.losses = 0;
-        this.coach = coach;
-        this.type = type;
-        this.roster = new ArrayList<>();
-        coach.setTeam(this);
-    }
+    
 
     /**
      * Getter for name
