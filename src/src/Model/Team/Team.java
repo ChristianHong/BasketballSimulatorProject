@@ -32,17 +32,7 @@ public class Team {
         this.championships = 0;
     }
 
-    /**
-     * Constructor for team when number of championships is known
-     * @param name Name of team
-     */
-    public Team(String name, int championships){
-        this.name = name;
-        this.wins = 0;
-        this.losses = 0;
-        this.roster = new ArrayList<>();
-        this.championships = championships;
-    }
+    
 
     /**
      * Constructor for team when a coach has been assigned
