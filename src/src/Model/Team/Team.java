@@ -20,7 +20,17 @@ public class Team {
     private TeamType type;
     private int championships;
 
-    
+    /**
+     * Constructor for team when no coach has been assigned
+     * @param name Name of team
+     */
+    public Team(String name){
+        this.name = name;
+        this.wins = 0;
+        this.losses = 0;
+        this.roster = new ArrayList<>();
+        this.championships = 0;
+    }
 
     /**
      * Constructor for team when number of championships is known
