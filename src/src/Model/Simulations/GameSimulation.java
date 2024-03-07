@@ -100,7 +100,18 @@ public class GameSimulation {
         return new PlayerStats(player, outsideTotal, insideTotal, rebounds, assists);
     }
 
-    
+    /**
+     * Updates a single players stat to determine overtime winner
+     * @param teamStats Team that will win overtime
+     * @return Updated teamStats
+     */
+    public TeamStats overTime(TeamStats teamStats){
+        PlayerStats stats = teamStats.getStatsList().get(0);
+        teamStats.removeStat(stats);
+        stats.updatePoints(1); //add a point to a player from winning team
+        teamStats.updateStats(stats);
+        return teamStats;
+    }
 
     /**
      * Runs the simulation by generating individual player stat lines and combining them, then tells game who won
