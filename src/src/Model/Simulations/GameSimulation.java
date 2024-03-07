@@ -36,29 +36,7 @@ public class GameSimulation {
         this.team2Stats = new TeamTotals(game.getTeam2());
     }
 
-    /**
-     * Sets role factor
-     * @param role Role of player
-     */
-    public void setRole(Role role){
-        switch (role) {
-            case Superstar:
-                ROLE_FACTOR = 1.15;
-                break;
-            case Star:
-                ROLE_FACTOR = 1;
-                break;
-            case Starter:
-                ROLE_FACTOR = .80;
-                break;
-            case Sixth_man:
-                ROLE_FACTOR = .75;
-                break;
-            case Bench:
-                ROLE_FACTOR = .65;
-                break;
-        }
-    }
+    
 
     /**
      * Generates stats for a player on team 1
