@@ -80,25 +80,7 @@ public class GameSimulation {
         return new PlayerStats(player, outsideTotal, insideTotal, rebounds, assists);
     }
 
-    /**
-     * Generates stats for a player on team 2
-     * @param player Player whose stats will be generated
-     * @return PlayerStats of player
-     */
-    public PlayerStats team2PlayerStatGenerator(Player player){
-        setRole(player.getRole());
-        int outsideTotal = (int) (((player.getRating().getOutsideShotRating() + team2Stats.getPassingAverage() -
-                team1Stats.getOutsideDefenseAverage()) / OUTSIDE_FACTOR) * ROLE_FACTOR);
-        int insideTotal = (int) (((player.getRating().getInsideShotRating() + team2Stats.getPassingAverage() -
-                team1Stats.getInsideDefenseAverage()) / INSIDE_FACTOR) * ROLE_FACTOR);
-        int rebounds = (int) (((player.getRating().getReboundRating() + team2Stats.getReboundingAverage() -
-                (team1Stats.getInsideDefenseAverage() -
-                        player.getRating().getReboundRating())) / REBOUND_FACTOR) * ROLE_FACTOR);
-        int assists = (int) (((player.getRating().getPassingRating() + team2Stats.getInsideScoringAverage() +
-                team2Stats.getOutsideScoringAverage() - team1Stats.getOutsideDefenseAverage() -
-                team1Stats.getInsideDefenseAverage()) / ASSIST_FACTOR) * ROLE_FACTOR);
-        return new PlayerStats(player, outsideTotal, insideTotal, rebounds, assists);
-    }
+    
 
     /**
      * Updates a single players stat to determine overtime winner
